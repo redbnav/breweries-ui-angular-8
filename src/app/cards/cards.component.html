@@ -1,0 +1,22 @@
+<!-- <div *ngFor="let card of cards" class="card card-1">
+  <img [src]="card['image']" alt="" />
+  <div class="text-block">
+    <h6>{{ card["state"] }}:<br />Breweries: {{ card["state_breweries"] }}</h6>
+  </div>
+</div> -->
+
+<div id="scene" class="banner">
+  <div *ngFor="let card of cards" class="banner_holder">
+    <div
+      class="banner_holderImage"
+      [style.background-image]="'url(' + getImage(card) + ')'"
+    >
+      <div class="text-block">
+        <h5>
+          {{ card["state"] | titlecase }}<br />Breweries:
+          {{ card["state_breweries"] }}
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<app-cards></app-cards>
+<google-map [zoom]="zoom" [width]="10" [center]="center">
+  <map-marker
+    #marker
+    *ngFor="let markerPosition of markerPositions"
+    [position]="markerPosition"
+    [options]="options"
+    (mapClick)="openInfoWindow(marker)"
+  ></map-marker>
+</google-map>
