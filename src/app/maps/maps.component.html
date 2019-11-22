@@ -1,10 +1,55 @@
 <app-cards></app-cards>
-<google-map [zoom]="zoom" [width]="10" [center]="center">
+<!-- <google-map
+  [width]="10"
+  (mapClick)="addMarker($event)"
+  [options]="options"
+  [center]="center"
+>
   <map-marker
     #marker
     *ngFor="let markerPosition of markerPositions"
     [position]="markerPosition"
-    [options]="options"
-    (mapClick)="openInfoWindow(marker)"
+  ></map-marker>
+</google-map> -->
+
+<!-- { "lat": 21.241967817652185, "lng": 5.8483428955078125 } -->
+
+<google-map
+  [width]="10"
+  [options]="options"
+  [center]="center"
+  [zoom]="zoom"
+  (mapClick)="mapclick($event)"
+>
+  <map-marker
+    *ngFor="let markerPosition of markerPositions"
+    #marker
+    [position]="markerPosition"
+    [options]="markerOptions"
   ></map-marker>
 </google-map>
+<!-- <map-info-window>Info Window content</map-info-window> -->
+
+<!-- <google-map
+  [width]="10"
+  [options]="options"
+  [center]="center"
+  [zoom]="zoom"
+  (mapClick)="addMarker($event)"
+  (mapMousemove)="move($event)"
+  (mapRightclick)="removeLastMarker()"
+>
+  <span *ngFor="let markerPosition of markerPositions">
+    <map-marker
+      #marker
+      [position]="markerPosition"
+      [options]="markerOptions"
+      (mapClick)="openInfoWindow(marker)"
+    ></map-marker>
+    <map-info-window>Info Window content</map-info-window>
+    {{ markerPosition | json }}
+  </span>
+</google-map>
+
+<div>Latitude: {{ display?.lat }}</div>
+<div>Longitude: {{ display?.lng }}</div> -->

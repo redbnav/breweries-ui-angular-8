@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AuthService } from "./services/auth.service";
 import { SlideMenuModule } from "cuppa-ng2-slidemenu/cuppa-ng2-slidemenu";
 import { GoogleMapsModule } from "@angular/google-maps";
+import { ChartsModule } from "ng2-charts";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -12,7 +13,13 @@ import { BreweriesComponent } from "./breweries/breweries.component";
 import { HeaderComponent } from "./header/header.component";
 import { CardsComponent } from "./cards/cards.component";
 import { MapsComponent } from "./maps/maps.component";
-import { MatToolbarModule, MatButtonModule } from "@angular/material";
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatTableModule,
+  MatPaginatorModule
+} from "@angular/material";
+import { ChartsComponent } from "./charts/charts.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +27,8 @@ import { MatToolbarModule, MatButtonModule } from "@angular/material";
     BreweriesComponent,
     HeaderComponent,
     CardsComponent,
-    MapsComponent
+    MapsComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,10 @@ import { MatToolbarModule, MatButtonModule } from "@angular/material";
     SlideMenuModule,
     GoogleMapsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    ChartsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

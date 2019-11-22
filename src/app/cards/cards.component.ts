@@ -16,14 +16,16 @@ export class CardsComponent implements OnInit, AfterContentInit {
     return el["image"];
   }
 
-  getStateWiseCards() {
-    this.authSerive.getStateWiseBreweries().subscribe((cardsData: Card[]) => {
-      this.cards = cardsData;
-    });
+  getStateWiseCards(limit) {
+    this.authSerive
+      .getStateWiseBreweries(limit)
+      .subscribe((cardsData: Card[]) => {
+        this.cards = cardsData;
+      });
   }
 
   ngAfterContentInit() {}
   ngOnInit() {
-    // this.getStateWiseCards();
+    // this.getStateWiseCards(3);
   }
 }
