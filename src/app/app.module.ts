@@ -20,6 +20,9 @@ import {
   MatPaginatorModule
 } from "@angular/material";
 import { ChartsComponent } from "./charts/charts.component";
+import { AuthComponent } from './auth/auth.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { ChartsComponent } from "./charts/charts.component";
     HeaderComponent,
     CardsComponent,
     MapsComponent,
-    ChartsComponent
+    ChartsComponent,
+    AuthComponent,
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
