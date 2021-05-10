@@ -24,7 +24,7 @@
     "@angular/router": "~8.2.11",
     "chart.js": "^2.9.3",
     "cuppa-ng2-slidemenu": "^2.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "ng2-charts": "^2.3.0",
     "parallax-js": "^3.1.0",
     "rxjs": "~6.4.0",
